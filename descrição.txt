@@ -1,0 +1,24 @@
+Problema de Negócio:
+
+
+Houve um aumento no número de clientes que abandonaram o serviço de cartão de crédito do banco. 
+
+Precisamos construir um modelo de churn para prever os clientes com maior probabilidade, potencial de desistência.
+Assim, sabendo quais são os clientes com antecedência, é possível que o banco ofereça melhores condições para os potenciais churn.
+
+
+Banco de Dados:
+
+Esse banco de dados foi obtido no site do Kaggle ("https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers")
+
+O banco de dados consiste no registro de 10.127 clientes contendo informações como idade, salario, limite do cartão de crédito, período que é cliente
+, o tipo de cartão de crédito, o número de vezes que entrou em contato com o banco no último ano, número de meses que ficou inativo...
+
+
+Temos o registro de xxxx usuarios.
+
+
+Metodologia:
+
+Construí um modelo de classificação com Random Forest, Decision Tree e Logistic Regression. O modelo mais promissor foi o de Random F.
+
