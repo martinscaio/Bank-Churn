@@ -197,7 +197,12 @@ st.write("Após especificar todas as informações do cliente é só clicar no b
 
 # CARREGANDO O MODELO DE CLASSIFICAÇÃO
 
-with open(r"C:\Users\Caio\Desktop\Credit Card Customers\model_churn.pkl", 'rb') as file:  
+#with open(r"C:\Users\Caio\Desktop\Credit Card Customers\model_churn.pkl", 'rb') as file:  
+#    model = pickle.load(file)
+
+
+model_path = "model_churn.pkl"
+with open(model_path, 'rb') as file:
     model = pickle.load(file)
 
 
