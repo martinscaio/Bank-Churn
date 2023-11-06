@@ -1,7 +1,7 @@
 # Bank Churn Prediction - Classifcation Problem
 
 
-[Clique aqui](bank-churn.streamlit.app) para testar o modelo de churn
+[Clique aqui](https://bank-churn.streamlit.app) para testar o modelo de churn
 
 ## Business Problem:
 
@@ -38,7 +38,7 @@ O modelo final selecionado utiliza o Random Forest por ser o modelo mais promiss
 
 Também fizemos o deploy do modelo utilizando o Streamlit.
 
-Pode acessar e utilizar o modelo neste [link](bank-churn.streamlit.app)
+Pode acessar e utilizar o modelo neste [link](https://bank-churn.streamlit.app)
 
 
 ## Resultados e métricas do modelo
