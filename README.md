@@ -1,7 +1,7 @@
 # Bank Churn Prediction - Classifcation Problem
 
 
-[Clique aqui](https://bank-churn.streamlit.app) para testar o modelo de churn
+[Clique aqui](https://bank-churn.streamlit.app) para testar o modelo de churn no Streamlit
 
 ## Business Problem:
 
