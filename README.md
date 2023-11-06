@@ -44,18 +44,32 @@ Pode acessar e utilizar o modelo neste [link](https://bank-churn.streamlit.app)
 ## Resultados e métricas do modelo
 
 
+#### Performance 
+
+#### Qual a performance dos modelos preliminares ? 
+
+Segue foto abaixo com os desempenhos. 
+
+
+
+
+
 
 
 #### Qual a performance do Modelo Final utilizando Random Forest ? 
 
 
-#### Classification Report:
+#### Como ficou a matriz de confusão 
+
+#### E o Classification Report:
 
 
 
 #### Curva ROC:
 
 
-#### Mas afinal, quais foram as variáveis selecionadas ?
+#### Mas afinal, quais foram as variáveis selecionadas pelo teste univariado F?
+
+#### O quão calibrado estão as previsões do nosso modelo ?
 
 
