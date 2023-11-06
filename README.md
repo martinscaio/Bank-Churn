@@ -1,6 +1,8 @@
 # Bank Churn Prediction - Classifcation Problem
 
 
+[Clique aqui](bank-churn.streamlit.app) para testar o modelo de churn
+
 ## Business Problem:
 
 
@@ -12,7 +14,7 @@ Como podemos mitigar o churn ? Vamos criar um modelo de classificação que nos 
 
 Construir um modelo de churn para detectar os clientes com maior propensão de churn
 
-Sabendo quais são os clientes com maior/menor risco, o banco pode adotar diferentes planos de atuação para cada tipo de cliente visando a diminuição do churn.
+Sabendo quais são os clientes com maior e menor risco, o banco pode adotar diferentes abordagens para cada tipo de cliente visando a diminuição do churn.
 
 
 ## Dados:
@@ -20,7 +22,7 @@ Sabendo quais são os clientes com maior/menor risco, o banco pode adotar difere
 O banco de dados foi obtido no [Kaggle](https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers)
 
 Consiste no registro de 10.127 clientes contendo informações como idade, salario, limite do cartão de crédito, tipo de cartão de crédito,
-o número de vezes que entrou em contato com o banco no último ano, número de meses que ficou inativo... etc. 
+o número de vezes que entrou em contato com o banco no último ano, número de meses que ficou inativo... entre outros. 
 
 É possível consultar todas as variáveis no 'dicionário de variáveis'
 
@@ -34,7 +36,9 @@ Construção de um modelo de classificação para prever churn utilizando Random
 O modelo final selecionado utiliza o Random Forest por ser o modelo mais promissor. Neste modelo utilizamos pre processing (OneHotEncoder), Feature Selection
 (Teste Univariado F), tunagem de hiperparametros... 
 
-Também fizemos o deploy do modelo utilizando o Streamlit
+Também fizemos o deploy do modelo utilizando o Streamlit.
+
+Pode acessar e utilizar o modelo neste [link](bank-churn.streamlit.app)
 
 
 ## Resultados e métricas do modelo
