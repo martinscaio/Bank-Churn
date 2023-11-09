@@ -196,14 +196,18 @@ st.write("Após especificar todas as informações do cliente é só clicar no b
 
 # CARREGANDO O MODELO DE CLASSIFICAÇÃO
 
-#with open(r"C:\Users\Caio\Desktop\Credit Card Customers\model_churn.pkl", 'rb') as file:  
-#    model = pickle.load(file)
+import os
 
+script_dir = os.path.dirname(__file__)
+model_path = os.path.join(script_dir, 'model_churn2.pkl')
 
-model_path = "C:/Users/Caio/Desktop/Credit Card Customers/model_churn2.pkl"
 with open(model_path, 'rb') as file:
     model = pickle.load(file)
 
+
+#model_path = "C:/Users/Caio/Desktop/Credit Card Customers/model_churn2.pkl"
+#with open(model_path, 'rb') as file:
+    
 
 
 
