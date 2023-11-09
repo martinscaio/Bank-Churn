@@ -4,7 +4,6 @@ import streamlit as st
 import pickle
 
 
-
 # Título
 st.markdown("<h1 style='text-align: center; color: white;'>Bank Churn Prediction</h1>", unsafe_allow_html=True)
 
@@ -201,7 +200,7 @@ st.write("Após especificar todas as informações do cliente é só clicar no b
 #    model = pickle.load(file)
 
 
-model_path = "model_churn.pkl"
+model_path = "C:/Users/Caio/Desktop/Credit Card Customers/model_churn2.pkl"
 with open(model_path, 'rb') as file:
     model = pickle.load(file)
 
