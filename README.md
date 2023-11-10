@@ -38,8 +38,8 @@ o número de vezes que entrou em contato com o banco no último ano, número de 
 ## Metodologia:
 
 Construção de um modelo de classificação para prever churn utilizando Random Forest,XGBoost, Decision Tree e Logistic Regression. 
-O modelo final selecionado utiliza o Random Forest por ser o modelo mais promissor. Neste modelo utilizamos pre processing, Feature Selection
-(Mutual Information), tunagem de hiperparametros... tudo isso utilizando o Pipeline do Sklearn. 
+O modelo selecionado utiliza o Random Forest por ser o mais promissor. Neste modelo utilizamos pre processing, Feature Selection
+(Mutual Information), tunagem de hiperparametros... tudo isso encapsulado  com o Pipeline do Sklearn. 
 
 Também fizemos o deploy do modelo utilizando o Streamlit.
 
@@ -48,7 +48,7 @@ Pode acessar e utilizar o modelo neste [link](https://bank-churn.streamlit.app)
 
 ## Resultados e métricas
 
-Neste projeto testei vários modelos(sem usar dados de teste, obviamente) para verificar qual apresentava ser o mais promissor. Não irei mostrar as métricas preliminares aqui. Caso queira ver é só acessar o arquivo 'modelagem' que possui o trabalho completo.
+Neste projeto testei vários modelos(sem usar dados de teste, obviamente) para verificar qual aparentava ser o mais promissor. Não irei mostrar as métricas preliminares aqui. Caso queira ver é só acessar o arquivo 'modelagem' que possui o trabalho completo.
 
 O algoritmo escolhido foi o Random Forest. 
 
@@ -62,10 +62,14 @@ Abaixo as médias de algumas métricas do Cross Validation(K = 5):
 
 ![metricas_modelofinal](https://github.com/martinscaio/Bank-Churn/blob/main/modelofinal_crossvalidation.png)
 
+Podemos verificar que o modelo apresenta uma boa capacidade de generalização com dados não vistos. 
+
 
 #### Mas qual a performance utilizando os dados de teste ?
 
 ![metricas](https://github.com/martinscaio/Bank-Churn/blob/main/metricas_modelofinal.png)
+
+Percebos mais uma vez que o modelo apresenta boas métricas quando aplicado a base de teste. Uma boa performance capaz de ajudar na prevenção/mitigação de churn.
 
 #### E o Classification Report ?
 
