@@ -33,15 +33,34 @@ o número de vezes que entrou em contato com o banco no último ano, número de 
 ## Metodologia:
 
 Construção de um modelo de classificação para prever churn utilizando Random Forest,XGBoost, Decision Tree e Logistic Regression. 
-O modelo final selecionado utiliza o Random Forest por ser o modelo mais promissor. Neste modelo utilizamos pre processing (OneHotEncoder), Feature Selection
-(Teste Univariado F), tunagem de hiperparametros... 
+O modelo final selecionado utiliza o Random Forest por ser o modelo mais promissor. Neste modelo utilizamos pre processing, Feature Selection
+(Mutual Information), tunagem de hiperparametros... tudo isso utilizando o Pipeline do Sklearn. 
 
 Também fizemos o deploy do modelo utilizando o Streamlit.
 
 Pode acessar e utilizar o modelo neste [link](https://bank-churn.streamlit.app)
 
 
-## Resultados e métricas do modelo
+## Resultados e métricas
+
+#### Qual a performance/métrica do modelo final ?
+
+Abaixo as médias de algumas métricas do Cross Validation(K = 5):
+
+
+#### Mas qual a performance utilizando os dados de teste ?
+
+foto das métricas
+
+#### Classification Report
+
+
+#### Curva ROC
+
+
+#### Curva Precisão-Recall vs Threshold
+
+
 
 
 #### Performance 
