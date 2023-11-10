@@ -43,6 +43,14 @@ Pode acessar e utilizar o modelo neste [link](https://bank-churn.streamlit.app)
 
 ## Resultados e métricas
 
+Neste projeto testei vários modelos(sem usar dados de teste, obviamente) para verificar qual apresentava ser o mais promissor. Não irei mostrar as métricas preliminares aqui. Caso queira ver é só acessar o arquivo 'modelagem' que possui o trabalho completo.
+
+O algoritmo escolhido foi o Random Forest. 
+
+Como estamos lidando com dados desbalanceados, optei por utilizar o método do Class Weight para atribuir pesos diferentes às classes, de modo que o modelo leve em consideração a desigualdade na distribuição das classes durante o treinamento.
+
+Caso queira verificar o Pipeline do modelo, a tunagem dos hiperparametros basta verificar no arquivo 'modelagem'.
+
 #### Qual a performance/métrica do modelo final ?
 
 Abaixo as médias de algumas métricas do Cross Validation(K = 5):
@@ -52,43 +60,52 @@ Abaixo as médias de algumas métricas do Cross Validation(K = 5):
 
 foto das métricas
 
-#### Classification Report
+#### E o Classification Report ?
 
 
 #### Curva ROC
 
 
+#### O quão calibrado estão as previsões do nosso modelo ?
+
+
+
 #### Curva Precisão-Recall vs Threshold
 
+Este é um projeto que visa identificar os potenciais Churn com o intuito de mitigá-los. Para este problema é fundamental que consigamos um modelo que reduza os falsos negativos. Por isso priorizamos o Recall ao invés da Precisão! Em outras palavras, queremos identificar ao máximo os clientes que estão em risco de Churn, mesmo que isso signifique na prática ter alguns casos de falsos positivos. É fundamental maximizar o Recall nesses cenários! O recall é uma métrica que mede a capacidade do modelo de identificar a maioria dos casos positivos reais. Ou seja, de todas as instâncias positivas, qual o percentual é identificado corretamente pelo modelo ? No nosso caso seria: de todos os clientes que são Churns, qual percentual o nosso modelo consegue identificar corretamente ? 
 
+Como vimos acima o nosso modelo consegue captar 84% usando threshold de 0.5
 
-
-#### Performance 
-
-#### Qual a performance dos modelos preliminares ? 
-
-Segue foto abaixo com os desempenhos. 
-
+Porém, como vimos no gráfico acima, podemos obter uma melhor métrica de recall se utilizarmos um threshold de 0.4. Por padrão o modelo tende a utilizar o Threshold de 0.5, ou seja, caso o output seja >= 0.5 é considerado 'Churn' e abaixo de 0.5 considerado 'Não Churn'. A depender da aplicação do modelo podemos utilizar um Threshold diferente de 0.5! Neste caso iremos adotar um Threshold de 0.4 para maximizar o recall.
 
 
 
 
+#### Performance do modelo utilizando threshold de 0.4
+
+#### Como fica o Classification Report ? 
+
+Segue foto abaixo do classification.
+
+Podemos verificar um aumento do Recall de 0.84 para 0.88 e um declínio da Precisão de 0.86 para 0.82. Isso faz sentido neste problema que estamos tentando resolver!
 
 
-#### Qual a performance do Modelo Final utilizando Random Forest ? 
+
+#### Faixas de Riscos
+
+Nosso modelo para prever Churn utilizando Random Forest já está pronto! Mas vamos torná-lo mais útil para os tomadores de decisão!
+Como faremos isso ? Dificilmente um banco irá utilizar um modelo como saída binária 0 e 1. Faz sentido criarmos uma faixa "Risco de Churn" com base nos scores preditos pelo modelo. Isso permitirá o banco adotar diferentes planos de ação com base no risco de cada cliente.
+
+Um cliente com alto risco de churn necessitará de uma abordagem cirúrgica e comercialmente agressiva, diferentemente de um cliente que possui risco baixo de churn. Essa segmentação facilitará e tornará mais efetiva a atuação do banco na mitigação de churn. O plano de atuação para um cliente considerado risco médio de virar churn é diferente de um cliente prestes a abandonar o serviço, assim como é diferente do plano de ação para um cliente com baixo risco de virar churn.
+
+#### Como fica as nossas previsões utilizando uma faixa de Risco ? 
+
+Vamos cruzar os scores criados pelo modelo com o target real dos dados 
 
 
-#### Como ficou a matriz de confusão 
 
-#### E o Classification Report:
-
+#### Abrindo a caixa preta: quais são as variáveis mais importantes para o nosso modelo ?
 
 
-#### Curva ROC:
-
-
-#### Mas afinal, quais foram as variáveis selecionadas pelo teste univariado F?
-
-#### O quão calibrado estão as previsões do nosso modelo ?
 
 
