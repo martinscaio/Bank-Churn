@@ -3,6 +3,11 @@
 
 [Clique aqui](https://bank-churn.streamlit.app) para testar o modelo de churn no Streamlit
 
+
+Abaixo uma foto da interface do aplicativo
+
+![interface_app](https://github.com/martinscaio/Bank-Churn/blob/main/Interface_App.png)
+
 ## Business Problem:
 
 
@@ -55,29 +60,30 @@ Caso queira verificar o Pipeline do modelo, a tunagem dos hiperparametros basta 
 
 Abaixo as médias de algumas métricas do Cross Validation(K = 5):
 
-foto aqui
+![metricas_modelofinal](https://github.com/martinscaio/Bank-Churn/blob/main/modelofinal_crossvalidation.png)
 
 
 #### Mas qual a performance utilizando os dados de teste ?
 
-foto aqui
+![metricas](https://github.com/martinscaio/Bank-Churn/blob/main/metricas_modelofinal.png)
 
 #### E o Classification Report ?
 
-foto aqui
+![classification_report](https://github.com/martinscaio/Bank-Churn/blob/main/ClassificationReport_ModeloFinal.png)
 
 #### Curva ROC
 
-foto aqui
+![curva roc](https://github.com/martinscaio/Bank-Churn/blob/main/CurvaROC_ModeloFinal.png)
 
 #### O quão calibrado estão as previsões do nosso modelo ?
 
-foto aqui
+![teste](https://github.com/martinscaio/Bank-Churn/blob/main/CalibrationCurve_ModeloFinal.png)
 
 
 #### Curva Precisão-Recall vs Threshold
 
-foto aqui
+![precisao_recall](https://github.com/martinscaio/Bank-Churn/blob/main/CurvaPrecisaoRecall_ModeloFinal.png)
+
 
 Este é um projeto que visa identificar os potenciais Churn com o intuito de mitigá-los. Para este problema é fundamental que consigamos um modelo que reduza os falsos negativos. Por isso priorizamos o Recall ao invés da Precisão! Em outras palavras, queremos identificar ao máximo os clientes que estão em risco de Churn, mesmo que isso signifique na prática ter alguns casos de falsos positivos. É fundamental maximizar o Recall nesses cenários! O recall é uma métrica que mede a capacidade do modelo de identificar a maioria dos casos positivos reais. Ou seja, de todas as instâncias positivas, qual o percentual é identificado corretamente pelo modelo ? No nosso caso seria: de todos os clientes que são Churns, qual percentual o nosso modelo consegue identificar corretamente ? 
 
@@ -90,9 +96,11 @@ Porém, como vimos no gráfico acima, podemos obter uma melhor métrica de recal
 
 #### Performance do modelo utilizando threshold de 0.4
 
+
 #### Como fica o Classification Report ? 
 
-foto aqui
+![class_report04](https://github.com/martinscaio/Bank-Churn/blob/main/ClassificationReport_Threshold04.png)
+
 
 Podemos verificar um aumento do Recall de 0.84 para 0.88 e um declínio da Precisão de 0.86 para 0.82. Isso faz sentido neste problema que estamos tentando resolver!
 
@@ -109,12 +117,12 @@ Um cliente com alto risco de churn necessitará de uma abordagem cirúrgica e co
 
 Vamos cruzar os scores criados pelo modelo com o target real dos dados 
 
-foto aqui
+![riscos](https://github.com/martinscaio/Bank-Churn/blob/main/Riscos_ModeloFinal.png)
 
 
 
 #### Abrindo a caixa preta: quais são as variáveis mais importantes para o nosso modelo ?
 
-foto aqui
+![variaveis mais importantes](https://github.com/martinscaio/Bank-Churn/blob/main/VariaveisMaisImportantes_ModeloFinal.png)
 
 
