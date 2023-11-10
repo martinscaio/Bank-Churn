@@ -55,22 +55,29 @@ Caso queira verificar o Pipeline do modelo, a tunagem dos hiperparametros basta 
 
 Abaixo as médias de algumas métricas do Cross Validation(K = 5):
 
+foto aqui
+
 
 #### Mas qual a performance utilizando os dados de teste ?
 
-foto das métricas
+foto aqui
 
 #### E o Classification Report ?
 
+foto aqui
 
 #### Curva ROC
 
+foto aqui
 
 #### O quão calibrado estão as previsões do nosso modelo ?
 
+foto aqui
 
 
 #### Curva Precisão-Recall vs Threshold
+
+foto aqui
 
 Este é um projeto que visa identificar os potenciais Churn com o intuito de mitigá-los. Para este problema é fundamental que consigamos um modelo que reduza os falsos negativos. Por isso priorizamos o Recall ao invés da Precisão! Em outras palavras, queremos identificar ao máximo os clientes que estão em risco de Churn, mesmo que isso signifique na prática ter alguns casos de falsos positivos. É fundamental maximizar o Recall nesses cenários! O recall é uma métrica que mede a capacidade do modelo de identificar a maioria dos casos positivos reais. Ou seja, de todas as instâncias positivas, qual o percentual é identificado corretamente pelo modelo ? No nosso caso seria: de todos os clientes que são Churns, qual percentual o nosso modelo consegue identificar corretamente ? 
 
@@ -85,7 +92,7 @@ Porém, como vimos no gráfico acima, podemos obter uma melhor métrica de recal
 
 #### Como fica o Classification Report ? 
 
-Segue foto abaixo do classification.
+foto aqui
 
 Podemos verificar um aumento do Recall de 0.84 para 0.88 e um declínio da Precisão de 0.86 para 0.82. Isso faz sentido neste problema que estamos tentando resolver!
 
@@ -102,10 +109,12 @@ Um cliente com alto risco de churn necessitará de uma abordagem cirúrgica e co
 
 Vamos cruzar os scores criados pelo modelo com o target real dos dados 
 
+foto aqui
+
 
 
 #### Abrindo a caixa preta: quais são as variáveis mais importantes para o nosso modelo ?
 
-
+foto aqui
 
 
